@@ -2,8 +2,9 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-image: url(../images/dot.png);
-    background-size: 10px;
+    /* background-image: url(../images/dot.png); */
+    background-image: url(../images/patoespia.png);
+    background-size: 64px;
     background-repeat: repeat;
 }
 
