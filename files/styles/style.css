@@ -2,7 +2,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    /* background-image: url(../images/dot.png); */
     background-image: url(../images/patoespia.png);
     background-size: 64px;
     background-repeat: repeat;
@@ -24,6 +23,10 @@ body {
     align-items: center;
 
     margin-left: 3px;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 header {
@@ -32,10 +35,11 @@ header {
     flex-grow: 2;
     align-items: end;
 
-
     border-radius: 20px;
     
     font-family: 'Segoe UI';
+
+    user-select: none;
 
 }
 
@@ -53,14 +57,27 @@ header h1{
     font-size: 1.2em;
 }
 
-header a {
+header nav a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #222;
+    font-size: 0.9em;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+}
+
+header nav button {
+    margin-left: 10px;
     text-decoration: none;
     color: #222;
     font-size: 0.9em;
     font-family: 'Segoe UI';
     font-weight: 600;
 
-    opacity: 1;
+    border: none;
+    padding: 0;
+    background-color: #0000;
+    cursor: pointer;
 }
 
 main {
@@ -70,13 +87,21 @@ main {
     align-self: center;
 }
 
-.description {
+.about-me {
     padding-left: 10px;
     padding-right: 10px;
     margin: 20px;
 
     width: 25vw;
-    height: 30vh;
+    min-height: 150px;
+}
+
+.about-me p {
+    color: #222;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    font-size: 1.05em;
+    cursor: text;
 }
 
 .container-languages {
@@ -115,4 +140,20 @@ main {
 .languages .language-logo.no-language-learned:hover {
     width: 27px;
     height: 27px;
+}
+
+.contact {
+    margin: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    min-width: max-content;
+}
+
+.contact .contact-list {
+    font-family: 'Segoe UI';
+    font-weight: 400;
+}
+
+#img-perfil {
+    transition-duration: 2s;
 }
